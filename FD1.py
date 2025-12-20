@@ -8,9 +8,6 @@ from requests import get
 import logging
 import os
 def add_bg_from_local(image_file):
-    """
-    Définit une image de fond depuis un fichier local pour Streamlit.
-    """
     import base64
     with open(image_file, "rb") as f:
         encoded = base64.b64encode(f.read()).decode()
@@ -25,6 +22,11 @@ def add_bg_from_local(image_file):
         """,
         unsafe_allow_html=True
     )
+
+# ================= APPEL IMAGE DE FOND =================
+current_dir = os.path.dirname(os.path.abspath(__file__))  # dossier du script
+image_path = os.path.join(current_dir, "img_file3.jpg")
+add_bg_from_local(image_path)  # <-- remplace l'ancien add_bg_from_local('img_file3.jpg')
 
 logging.basicConfig(level=logging.WARNING)
 
