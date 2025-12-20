@@ -7,6 +7,24 @@ from bs4 import BeautifulSoup as bs
 from requests import get
 import logging
 import os
+def add_bg_from_local(image_file):
+    """
+    Définit une image de fond depuis un fichier local pour Streamlit.
+    """
+    import base64
+    with open(image_file, "rb") as f:
+        encoded = base64.b64encode(f.read()).decode()
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background-image: url("data:image/jpg;base64,{encoded}");
+            background-size: cover;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 logging.basicConfig(level=logging.WARNING)
 
