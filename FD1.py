@@ -156,6 +156,6 @@ else :  # Evaluate
     st.markdown("<h3 style='text-align: center;'>Give your Feedback</h3>", unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown('[Kobo Evaluation Form](https://ee.kobotoolbox.org/i/y3pfGxMz)', unsafe_allow_html=True)
+        st.markdown('[Kobo Evaluation Form](https://ee.kobotoolbox.org/x/bovbBGz7)', unsafe_allow_html=True)
     with col2:
         st.markdown('[Google Forms Evaluation](https://docs.google.com/forms/d/e/XXXXXXXXX/viewform?usp=sf_link)', unsafe_allow_html=True)
