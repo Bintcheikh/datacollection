@@ -7,26 +7,26 @@ from bs4 import BeautifulSoup as bs
 from requests import get
 import logging
 import os
-def add_bg_from_local(image_file):
-    import base64
-    with open(image_file, "rb") as f:
-        encoded = base64.b64encode(f.read()).decode()
-    st.markdown(
-        f"""
-        <style>
-        .stApp {{
-            background-image: url("data:image/jpg;base64,{encoded}");
-            background-size: cover;
-        }}
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+#def add_bg_from_local(image_file):
+   # import base64
+    #with open(image_file, "rb") as f:
+    #    encoded = base64.b64encode(f.read()).decode()
+    #st.markdown(
+       # f"""
+       # <style>
+        #.stApp {{
+       #     background-image: url("data:image/jpg;base64,{encoded}");
+       #     background-size: cover;
+       # }}
+       # </style>
+        #""",
+        #unsafe_allow_html=True
+    #)
 
 # ================= APPEL IMAGE DE FOND =================
-current_dir = os.path.dirname(os.path.abspath(__file__))  # dossier du script
-image_path = os.path.join(current_dir, "img_file3.jpg")
-add_bg_from_local(image_path)  # <-- remplace l'ancien add_bg_from_local('img_file3.jpg')
+#current_dir = os.path.dirname(os.path.abspath(__file__))  # dossier du script
+#image_path = os.path.join(current_dir, "img_file3.jpg")
+#add_bg_from_local(image_path)  # <-- remplace l'ancien add_bg_from_local('img_file3.jpg')
 
 logging.basicConfig(level=logging.WARNING)
 
@@ -91,8 +91,8 @@ Choices = st.sidebar.selectbox('Options', [
 ])
 
 # ================= BACKGROUND & CSS =================
-add_bg_from_local('img_file3.jpg') 
-local_css('style.css')  
+#add_bg_from_local('img_file3.jpg') 
+#local_css('style.css')  
 
 # ================= LOGIQUE =================
 if Choices=='Scrape data using beautifulSoup':
