@@ -209,4 +209,4 @@ else:  # Evaluate
     with col1:
         st.markdown("[Kobo Evaluation Form](https://ee.kobotoolbox.org/x/bovbBGz7)")
     with col2:
-        st.markdown("[Google Forms Evaluation](https://docs.google.com/forms/d/e/XXXXXXXXX/viewform)")
+        st.markdown("[Google Forms Evaluation](https://forms.gle/uFxkcoQAaU3f61LFA)")
